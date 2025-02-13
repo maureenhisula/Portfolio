@@ -50,6 +50,13 @@ body.dark{
 html{
     scroll-behavior: smooth;
 }
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
 /*---nav bar---*/
 nav{
     position: fixed;
@@ -63,10 +70,18 @@ nav{
     transition: 0.3s;
     z-index:100;
 }
+#header{
+    display: fixed;
+    position: fixed;
 
+}
 .nav-logo{
     padding-top: 5px;
     position: relative;
+    overflow: hidden;
+}
+.myLogo {
+    max-height: 1000px;
 }
 .nav-name{
     font-size: 30px;
@@ -124,7 +139,60 @@ nav{
     height: 2px;
     background: var(--first-color);
 }
-/*----- mode -----*/
+
+.nav-links{
+    text-decoration: none;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    display: block;
+}
+
+.sidemenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 150px;
+    z-index:99999;
+    background-color: lavenderblush;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+}
+.sidemenu li{
+    width: 100%;   
+    list-style: none;
+    height: 0px;
+    padding-left: 20px;
+    padding-bottom: 60px;
+    align-items: center;
+    justify-content: center;
+    display: fixed;
+    margin-top: 80px;
+}
+.sidemenu li:hover{
+    background-color:rgb(255, 241, 241);
+}
+.sidemenu a{
+    width: 100%;
+    padding-left: 10px;
+    
+} 
+.sidebar{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    right: 0;
+    width: 100px; 
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+} 
+
+/*---- mode -----*/
 .mode{
     display: flex;
     align-items: center;
@@ -286,8 +354,8 @@ width: 100%;
 }
 .image{
     margin-top: 10%;
-    width: 500px;
-    height: 500px;
+    width: 1500px;
+    height:1500px;
     padding: 0;
     background: linear-gradient(180deg, rgb(253, 218, 224), hsl(40, 100%, 75%));
     border-radius: 50%;
@@ -564,6 +632,8 @@ object-fit: cover;
     flex-direction: column;
     gap:10px;
     width: 100%;
+    padding: 20px;
+    justify-content: center;
 }
 .form-inputs{
     display: flex;
@@ -571,8 +641,9 @@ object-fit: cover;
     width: 100%;
 }
 .input-field{
-    width: 50%;
+    width: 500px;
     height: 55px;
+    margin-bottom: 5px;
     background: transparent;
     border: 2px solid #aaa;
     color: var(--text-color);
@@ -581,7 +652,7 @@ object-fit: cover;
     outline: none;
 }
 .input-subject{
-    width: 100%;
+    width: 500px;
     height: 55px;
     background:transparent;
     border: 2px solid #aaa;
@@ -592,7 +663,7 @@ object-fit: cover;
     outline: none;
 }
 textarea{
-    width: 100%;
+    width: 500px;
     height: 250px;
     background: transparent;
     border: 2px solid #aaa;
@@ -601,6 +672,7 @@ textarea{
     border-radius: 10px;
     outline: none;
     resize: none;
+    
 }
 .form-button > .btn{
     display: flex;
@@ -660,15 +732,25 @@ footer{
     color: var(--color-white);
 }
 /*----media query = 1024px---*/
-@media only screen and (max-width: 1024px){
+@media only screen and (min-width: 1024px){
     .featured-text{
         padding: 0;
     }
     .image,
     .image img{
-        width: 320px;
-        height: 320px;
+        width: 480px;
+        height: 480px;
     }
+    .sidebar {
+        display: none;
+    }
+    .sidemenu{
+        display: none;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+    
 }
 
 /*----media query = 900px---*/
@@ -697,7 +779,7 @@ footer{
         flex-direction: column;
     }
     .nav-menu-btn{
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
     }
@@ -735,9 +817,10 @@ footer{
         gap: 50px;
     }
     .col{
-        display: flex;
-        justify-content: center;
-        width: 100%;
+      position: flex;
+      justify-content: center;
+      width: 100%;
+
     }
     .about-info,
     .contact-info{
@@ -753,10 +836,42 @@ footer{
         display: flex;
         align-items: center;
         margin-left: 60%;
+    } 
+    .sidebar{
+        display: flex;
+        justify-content: center;
+        padding: 30px;
+        right: 0;
+        width: 100px; 
+        position: fixed;
+        z-index: 500;
+        top: 0
     }
-
+    .sidemenu{
+        position: fixed;
+    }
+    .sidemenu li{
+        height: 30px;
+        padding-left: 20px;
+        padding-bottom: 60px;
+        margin: 0;
+        display: fixed;
+       
+    }
+    .sidemenu li:hover{
+       font-weight: bold;
+    }
+    .sidemenu a{
+        width: 100%;
+        padding-left: 10px;
+    }
+    .input-field, .input-subject, textarea {
+       position: relative;
+       z-index: 10;
+       width: 420px;
+    }       
 }
-@media only screen and(max-width: 540px){
+@media only screen and(min-width:570px){
     .featured-name{
         font-size: 40px;
     }
@@ -772,4 +887,15 @@ footer{
     .mode{
         margin-left: 50%;
     }
+   .sidebar{
+    display: none;
+   }
+   .sidemenu{
+    display: none;
+   }
+   .hideOnMobile{
+    display: none;
+    }
+   
 }
+

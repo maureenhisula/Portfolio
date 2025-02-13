@@ -15,7 +15,7 @@
         <nav id="header">
             <div class="nav-logo">
                 <p class>
-                    <img src="img/logo-img.png">
+                    <img class="myLogo" src="img/logo-img.png">
                 </p>
             </div>
             <div class="nav-menu" id="myNavMenu">
@@ -38,6 +38,28 @@
                     </li>
                 </ul>
             </div>
+            <div class="hideOnMobile">
+                <ul class="sidemenu">
+                    <li class="hideOnMobile" onclick=hideSidebar()>
+                        <a><img src="icons/exit-menu.svg"></a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a href="#home" class="nav-links">Home</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a href="#about" class="nav-links">About</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a href="#projects" class="nav-links">Projects</a>
+                    </li>
+                    <li class="hideOnMobile">
+                        <a href="#contact" class="nav-links">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="sidebar" onclick=showSidebar()>
+                <i class="fa-solid fa-bars"></i>
+            </nav>
             <!---Dark Mode-->
             <div class="mode">
                 <div class="moon-sun" id="toggle-switch">
@@ -49,6 +71,8 @@
                 <i class="uil uil-bars" onclick="myMenuFunction()"></i>
             </div>
         </nav>
+
+
         <!--Main-->
         <main class="wrapper">
             <section class="featured-box" id="home">
@@ -62,7 +86,8 @@
                     <div class="text-info">
                         <p>My name is Maureen! —a 3rd-year Software Engineering student with a passion for web
                             development,
-                            striving to build innovative, full-stack solutions that create seamless digital experiences
+                            striving to build innovative, full-stack solutions that create seamless digital
+                            experiences
                             for users.</p>
                     </div>
                     <div class="text-btn">
@@ -95,7 +120,8 @@
                                 <figcaption>
                                     <img src="img/bg-img.png" alt="" class="profile" />
                                     <h2>Web Developer</h2>
-                                    <p>Hi, I'm Maureen, —a 3rd-year Software Engineering student with a passion for web
+                                    <p>Hi, I'm Maureen, —a 3rd-year Software Engineering student with a passion for
+                                        web
                                         development, striving to build innovative, full-stack solutions that create
                                         seamless digital experiences for users.</p>
 
@@ -226,7 +252,8 @@
                 <div class="icon"><i class="uil uil-github-alt"></i></div>
             </div>
             <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">MaureenShane</a> - All right reserved
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">MaureenShane</a> - All right
+                    reserved
                     2025</p>
             </div>
         </footer>

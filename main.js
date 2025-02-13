@@ -109,11 +109,23 @@ form.addEventListener('submit', e =>
             setTimeout(function ()
             {
                 msg.innerHTML = ''
-            }, 5000)
+            }, 3000)
             form.reset()
         })
         .catch(error => console.error('Error!'), e.message);
 })
 
+// SIDEBAR BUTTON
+function showSidebar()
+{
+    const sidebar = document.querySelector('.sidemenu')
+    sidebar.style.display = 'flex';
 
+
+}
+function hideSidebar()
+{
+    const sidebar = document.querySelector('.sidemenu')
+    sidebar.style.display = 'none';
+}
 
