@@ -79,12 +79,12 @@ nav{
     padding-top: 5px;
     position: relative;
     overflow: hidden;
+    z-index: 999999;
 }
 .myLogo {
-    justify-items: center;
-    align-items: center;
     max-height: 100vh;
     width: 50vh;
+    overflow: hidden;
 }
 .nav-name{
     font-size: 30px;
@@ -870,9 +870,7 @@ footer{
         width: 420px;
      }   */ 
         .myLogo{
-            justify-items: center;
-            align-items: center;
-            max-height: 100vh;
+            max-height: 100%;
             width: 50vh;
         }
 }
@@ -901,12 +899,5 @@ footer{
    .hideOnMobile{
     display: none;
     } */
-    .myLogo{
-        justify-items: center;
-        align-items: center;
-        max-height: 100vh;
-        width: 50vh;
-    }
-   
 }
 
