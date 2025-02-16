@@ -83,7 +83,8 @@ nav{
 }
 .myLogo {
     max-height: 90vh;
-    width: 20vh;  
+    width: 22vh;  
+    position: fixed;
 }
 .nav-name{
     font-size: 30px;
