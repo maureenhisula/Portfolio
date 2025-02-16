@@ -79,11 +79,11 @@ nav{
     padding-top: 5px;
     position: relative;
     overflow: hidden;
+    
 }
 .myLogo {
-    max-height: 150vh;
-    width: 50vh;
-    position: fixed;
+    max-height: 100%;
+    width: 70%;  
 }
 .nav-name{
     font-size: 30px;
