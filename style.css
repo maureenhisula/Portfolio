@@ -140,7 +140,7 @@ nav{
     background: var(--first-color);
 }
 
-.nav-links{
+/* .nav-links{
     text-decoration: none;
     color: var(--text-color);
     align-items: center;
@@ -149,7 +149,7 @@ nav{
 }
 
 .sidemenu {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     height: 100vh;
@@ -190,8 +190,7 @@ nav{
     position: fixed;
     z-index: 5000;
     top: 0;
-} 
-
+}     */
 /*---- mode -----*/
 .mode{
     display: flex;
@@ -741,7 +740,7 @@ footer{
         width: 480px;
         height: 480px;
     }
-    .sidebar {
+   /*  .sidebar {
         display: none;
     }
     .sidemenu{
@@ -749,7 +748,7 @@ footer{
     }
     .hideOnMobile{
         display: none;
-    }
+    } */
     
 }
 
@@ -837,7 +836,7 @@ footer{
         align-items: center;
         margin-left: 60%;
     } 
-    .sidebar{
+   /*  .sidebar{
         display: flex;
         justify-content: center;
         padding: 30px;
@@ -864,14 +863,14 @@ footer{
     .sidemenu a{
         width: 100%;
         padding-left: 10px;
-    }
+    } */
     .input-field, .input-subject, textarea {
-       position: relative;
-       z-index: 10;
-       width: 420px;
-    }       
+        position: relative;
+        z-index: 10;
+        width: 420px;
+     }   
 }
-@media only screen and(min-width:570px){
+@media only screen and(min-width:540px){
     .featured-name{
         font-size: 40px;
     }
@@ -887,7 +886,7 @@ footer{
     .mode{
         margin-left: 50%;
     }
-   .sidebar{
+  /*  .sidebar{
     display: none;
    }
    .sidemenu{
@@ -895,7 +894,7 @@ footer{
    }
    .hideOnMobile{
     display: none;
-    }
+    } */
    
 }
 

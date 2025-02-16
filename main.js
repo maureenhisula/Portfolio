@@ -116,7 +116,7 @@ form.addEventListener('submit', e =>
 })
 
 // SIDEBAR BUTTON
-function showSidebar()
+/* function showSidebar()
 {
     const sidebar = document.querySelector('.sidemenu')
     sidebar.style.display = 'flex';
@@ -127,5 +127,5 @@ function hideSidebar()
 {
     const sidebar = document.querySelector('.sidemenu')
     sidebar.style.display = 'none';
-}
+} */
 
