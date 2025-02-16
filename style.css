@@ -79,12 +79,11 @@ nav{
     padding-top: 5px;
     position: relative;
     overflow: hidden;
-    z-index: 999999;
 }
 .myLogo {
-    max-height: 100vh;
+    max-height: 150vh;
     width: 50vh;
-    overflow: hidden;
+    position: fixed;
 }
 .nav-name{
     font-size: 30px;
@@ -869,10 +868,6 @@ footer{
         z-index: 10;
         width: 420px;
      }   */ 
-        .myLogo{
-            max-height: 100%;
-            width: 50vh;
-        }
 }
 @media only screen and(max-width:540px){
     .featured-name{
